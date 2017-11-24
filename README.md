@@ -3,7 +3,7 @@ Basic application to implement "Did you mean" like functionality. </br>It uses L
 
 # To run
 ```
-1. Open the <b>sample_data.txt</b> file and add the data set you want to test against (Sample Data for email domains is added).
+1. Open the sample_data.txt file and add the data set you want to test against (Sample Data for email domains is added).
 2. Open Runner.Java and run the program as java appication.
 3. Output is submitted to the console.
 ```
