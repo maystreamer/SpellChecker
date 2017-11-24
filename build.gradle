@@ -1,0 +1,35 @@
+buildscript {
+	ext {
+		luceneVersion		=	"3.6.2"
+		fuzzyWuzzyVersion	=	"1.1.9"
+		sourceJavaVersion	=	"1.8"
+		targetJavaVersion	=	"1.8"
+		commonsLang3Version	=	"3.5"
+		gradleVersion		=	"4.3.1"
+	}
+}
+
+plugins {
+  id 'java'
+  id 'eclipse'
+  id 'application'
+}
+
+repositories {
+	jcenter()
+}
+
+compileJava {
+	targetCompatibility = sourceJavaVersion
+	sourceCompatibility = targetJavaVersion
+}
+
+dependencies {
+    compile "org.apache.lucene:lucene-core:${luceneVersion}",
+    			"org.apache.lucene:lucene-spellchecker:${luceneVersion}",
+    			"me.xdrop:fuzzywuzzy:${fuzzyWuzzyVersion}"
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = gradleVersion
+}
